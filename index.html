@@ -4,342 +4,337 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LookUp</title>
+    <title>LookUp - Seu guarda-roupa inteligente</title>
+    <meta name="description" content="Organize suas roupas, descubra novas combinações e economize tempo escolhendo o que vestir. Simples, rápido e feito para o seu dia a dia.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!--HEADER-->
+    <!-- ==================== HEADER ==================== -->
     <header class="header">
-
-        <div class="logo">
-            <span class="logo-icon"><img src="img/logo.png"></span>
+        <div class="header__logo">
+            <img src="img/logo.png" alt="LookUp Logo" class="header__logo-image">
         </div>
 
-        <nav class="nav-menu">
-            <a href="#problema">Problema</a>
-            <a href="#solucao">Solução</a>
-            <a href="#recursos">Recursos</a>
+        <nav class="header__nav">
+            <a href="#problema" class="header__nav-link">Problema</a>
+            <a href="#solucao" class="header__nav-link">Solução</a>
+            <a href="#recursos" class="header__nav-link">Recursos</a>
         </nav>
 
-        <a href="#comecar" class="btn-primary-header"><button>Começar agora ❤</button></a>
-        <!--fechamento do HEADER-->
+        <!-- Menu Hamburger para Mobile -->
+        <button class="header__menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+            <span class="header__menu-bar"></span>
+            <span class="header__menu-bar"></span>
+            <span class="header__menu-bar"></span>
+        </button>
+
+        <a href="#comecar" class="header__cta-button">Começar agora ❤</a>
     </header>
 
-
+    <!-- ==================== HERO SECTION ==================== -->
     <section class="hero">
+        <!-- Círculos Decorativos -->
+        <div class="hero__decor-circle hero__decor-circle--1"></div>
+        <div class="hero__decor-circle hero__decor-circle--2"></div>
+        <div class="hero__decor-circle hero__decor-circle--3"></div>
+        <div class="hero__decor-circle hero__decor-circle--4"></div>
+        <div class="hero__decor-circle hero__decor-circle--5"></div>
+        <div class="hero__decor-circle hero__decor-circle--6"></div>
 
-        <!-- Bolhas decorativas -->
-        <div class="decor-circle circle1"></div>
-        <div class="decor-circle circle2"></div>
-        <div class="decor-circle circle3"></div>
-        <div class="decor-circle circle4"></div>
-        <div class="decor-circle circle5"></div>
-        <div class="decor-circle circle6"></div>
-        <div class="decor-circle circle7"></div>
-        <div class="decor-circle circle8"></div>
-
-
-
-        <div class="hero-container">
-
-            <!-- LADO ESQUERDO -->
-
-            <div class="hero-left">
-
-                <h1 class="hero-title">Seu guarda-roupa <span class="text-gradient">inteligente</span> em um só lugar
+        <div class="hero__container">
+            <!-- Lado Esquerdo - Conteúdo -->
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    Seu guarda-roupa <span class="hero__title-gradient">inteligente</span> em um só lugar
                 </h1>
 
-                <p class="hero-description">Organize suas roupas, descubra novas combinações e economize tempo
-                    escolhendo o que vestir. Simples, rápido e feito para o seu dia a dia.</p>
+                <p class="hero__description">
+                    Organize suas roupas, descubra novas combinações e economize tempo escolhendo o que vestir. Simples, rápido e feito para o seu dia a dia.
+                </p>
 
-                <div class="hero-buttons">
-
-                    <button class="btn-main">Testar agora ⟶</button>
-                    <button class="btn-outline">▶ Ver demonstração</button>
-                    <div class="blur-background2"></div>
-
+                <div class="hero__buttons">
+                    <button class="hero__button hero__button--primary">Testar agora ⟶</button>
+                    <button class="hero__button hero__button--outline">▶ Ver demonstração</button>
+                    <div class="hero__button-blur"></div>
                 </div>
 
-                <div class="hero-stats"><!--ícones-->
-
-                    <div class="users">
-
-                        <div class="user-avatar">A</div>
-                        <div class="user-avatar">B</div>
-                        <div class="user-avatar">C</div>
-                        <div class="user-avatar">D</div>
-                        <div class="user-avatar">E</div>
-                        <div class="stars"><img src="img/stars.png"></div>
-                        <span>+ 500 usuárias</span>
-
-
+                <div class="hero__stats">
+                    <!-- Avatares dos Usuários -->
+                    <div class="hero__users">
+                        <div class="hero__user-avatar hero__user-avatar--1">A</div>
+                        <div class="hero__user-avatar hero__user-avatar--2">B</div>
+                        <div class="hero__user-avatar hero__user-avatar--3">C</div>
+                        <div class="hero__user-avatar hero__user-avatar--4">D</div>
+                        <div class="hero__user-avatar hero__user-avatar--5">E</div>
+                        <img src="img/stars.png" alt="5 estrelas" class="hero__stars-image">
+                        <span class="hero__users-count">+ 500 usuárias</span>
                     </div>
 
-                    <div class="numbers">
-
-                        <div class="stat">
-                            <h3>+500</h3>
-                            <p>roupas organizadas</p>
+                    <!-- Números/Estatísticas -->
+                    <div class="hero__numbers">
+                        <div class="hero__stat">
+                            <h3 class="hero__stat-value">+500</h3>
+                            <p class="hero__stat-label">roupas organizadas</p>
                         </div>
-
-                        <div class="stat">
-                            <h3>4.9 ★</h3>
-                            <p>avaliação média</p>
+                        <div class="hero__stat">
+                            <h3 class="hero__stat-value">4.9 ★</h3>
+                            <p class="hero__stat-label">avaliação média</p>
                         </div>
                     </div>
                 </div>
-            </div> <!--fechamento do LADO ESQUERDO-->
+            </div>
 
+            <!-- Lado Direito - Imagem -->
+            <div class="hero__visual">
+                <div class="hero__visual-blur"></div>
+                <img src="img/phone-image.png" alt="App LookUp no celular" class="hero__phone-image">
 
-            <!-- LADO DIREITO -->
-
-            <div class="hero-right">
-
-                <div class="blur-background"></div>
-
-                <img class="phone-image" src="img/phone-image.png">
-
-                <div class="floating-card card-top">
-                    <p>✨ Look do dia </p><span>montado em 5s</span>
+                <!-- Cards Flutuantes -->
+                <div class="hero__floating-card hero__floating-card--top">
+                    <p class="hero__floating-card-title">✨ Look do dia</p>
+                    <span class="hero__floating-card-subtitle">montado em 5s</span>
                 </div>
 
-                <div class="floating-card card-bottom">
-                    <p>🩷 32 peças</p><span>organizadas hoje</span>
+                <div class="hero__floating-card hero__floating-card--bottom">
+                    <p class="hero__floating-card-title">🩷 32 peças</p>
+                    <span class="hero__floating-card-subtitle">organizadas hoje</span>
                 </div>
             </div>
         </div>
-        </div>
     </section>
 
-    <!-------------------Segundo bloco--------------------->
-
-
-    <section class="problemas" id="problema">
-        <div class="container-problemas">
-
-            <div class="cabecalho-secao">
-                <span class="tag-identifica">Você se identifica?</span>
-                <h2 class="titulo-problema">
-                    Seu guarda-roupa deveria <span class="destaque-curvo">facilitar</span> sua vida — não complicar
+    <!-- ==================== SEÇÃO PROBLEMAS ==================== -->
+    <section class="problems" id="problema">
+        <div class="problems__container">
+            <!-- Cabeçalho da Seção -->
+            <div class="problems__header">
+                <span class="problems__tag">Você se identifica?</span>
+                <h2 class="problems__title">
+                    Seu guarda-roupa deveria <span class="problems__title-highlight">facilitar</span> sua vida — não complicar
                 </h2>
-                <p class="subtitulo-problema">
+                <p class="problems__subtitle">
                     Se qualquer um desses cenários soa familiar, o LookUp foi feito para você.
                 </p>
             </div>
 
-            <div class="grade-problemas">
+            <!-- Grid de Cards -->
+            <div class="problems__grid">
+                <article class="problems__card">
+                    <div class="problems__card-icon">👕</div>
+                    <span class="problems__card-number">01</span>
+                    <h3 class="problems__card-title">Roupa esquecida no armário</h3>
+                    <p class="problems__card-text">Você tem mais roupas do que imagina, mas continua usando as mesmas 10 peças.</p>
+                    <div class="problems__card-emoji">😔</div>
+                </article>
 
-                <div class="card-problema">
-                    <div class="icone-box">👕</div>
-                    <span class="numero-card">01</span>
-                    <h3>Roupa esquecida no armário</h3>
-                    <p>Você tem mais roupas do que imagina, mas continua usando as mesmas 10 peças.</p>
-                    <div class="emoji-feedback">😔</div>
-                </div>
+                <article class="problems__card">
+                    <div class="problems__card-icon">🧠</div>
+                    <span class="problems__card-number">02</span>
+                    <h3 class="problems__card-title">Dificuldade de montar looks</h3>
+                    <p class="problems__card-text">Fica na frente do armário sem saber o que combina com o quê.</p>
+                    <div class="problems__card-emoji">🤔</div>
+                </article>
 
-                <div class="card-problema">
-                    <div class="icone-box">🧠</div>
-                    <span class="numero-card">02</span>
-                    <h3>Dificuldade de montar looks</h3>
-                    <p>Fica na frente do armário sem saber o que combina com o quê.</p>
-                    <div class="emoji-feedback">🤔</div>
-                </div>
+                <article class="problems__card">
+                    <div class="problems__card-icon">🛍️</div>
+                    <span class="problems__card-number">03</span>
+                    <h3 class="problems__card-title">Compra peças repetidas</h3>
+                    <p class="problems__card-text">Compra uma blusa azul e só em casa descobre que já tinha três iguais.</p>
+                    <div class="problems__card-emoji">🛍️</div>
+                </article>
 
-                <div class="card-problema">
-                    <div class="icone-box">🛍️</div>
-                    <span class="numero-card">03</span>
-                    <h3>Compra peças repetidas</h3>
-                    <p>Compra uma blusa azul e só em casa descobre que já tinha três iguais.</p>
-                    <div class="emoji-feedback">🛍️</div>
-                </div>
-
-                <div class="card-problema">
-                    <div class="icone-box">⏰</div>
-                    <span class="numero-card">04</span>
-                    <h3>Perda de tempo pela manhã</h3>
-                    <p>Gasta minutos (ou horas) decidindo o que vestir toda manhã.</p>
-                    <div class="emoji-feedback">🕒</div>
-                </div>
-
+                <article class="problems__card">
+                    <div class="problems__card-icon">⏰</div>
+                    <span class="problems__card-number">04</span>
+                    <h3 class="problems__card-title">Perda de tempo pela manhã</h3>
+                    <p class="problems__card-text">Gasta minutos (ou horas) decidindo o que vestir toda manhã.</p>
+                    <div class="problems__card-emoji">🕒</div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!---------------------Terceiro bloco-------------------------->
-
-    <section class="solucao" id="solucao">
-        <div class="container-solucao">
-
-            <div class="solucao-visual">
-                <div class="moldura-glass">
-                    <div class="grupo-celulares">
-                        <img src="img/celulares.png" alt="App LookUp" class="celular principal">
+    <!-- ==================== SEÇÃO SOLUÇÃO ==================== -->
+    <section class="solution" id="solucao">
+        <div class="solution__container">
+            <!-- Lado Visual -->
+            <div class="solution__visual">
+                <div class="solution__frame">
+                    <div class="solution__phones">
+                        <img src="img/celulares.png" alt="App LookUp" class="solution__phone-image">
                     </div>
                 </div>
-                <div class="circulo-decorativo decor-1"></div>
-                <div class="circulo-decorativo decor-2"></div>
+                <div class="solution__decor-circle solution__decor-circle--1"></div>
+                <div class="solution__decor-circle solution__decor-circle--2"></div>
             </div>
 
-            <div class="solucao-conteudo">
-                <span class="tag-solucao">A solução</span>
-                <h2 class="titulo-solucao">Conheça o <span class="destaque-logo">LookUp</span></h2>
+            <!-- Lado Conteúdo -->
+            <div class="solution__content">
+                <span class="solution__tag">A solução</span>
+                <h2 class="solution__title">Conheça o <span class="solution__title-highlight">LookUp</span></h2>
 
-                <p class="descricao-solucao">
+                <p class="solution__description">
                     Um aplicativo inteligente que transforma seu guarda-roupa em um sistema digital fácil de usar.
                     Chega de roupas esquecidas, looks repetidos e tempo perdido.
                 </p>
 
-                <ul class="lista-beneficios">
-                    <li>
-                        <span class="check-icone">✓</span>
+                <ul class="solution__benefits">
+                    <li class="solution__benefit">
+                        <span class="solution__benefit-icon">✓</span>
                         Interface simples e intuitiva
                     </li>
-                    <li>
-                        <span class="check-icone">✓</span>
+                    <li class="solution__benefit">
+                        <span class="solution__benefit-icon">✓</span>
                         Organização por categorias, cores e estilos
                     </li>
-                    <li>
-                        <span class="check-icone">✓</span>
+                    <li class="solution__benefit">
+                        <span class="solution__benefit-icon">✓</span>
                         Sugestões de looks na palma da mão
                     </li>
-                    <li>
-                        <span class="check-icone">✓</span>
+                    <li class="solution__benefit">
+                        <span class="solution__benefit-icon">✓</span>
                         Acesso rápido a todo seu guarda-roupa
                     </li>
                 </ul>
 
-                <button class="btn-experimentar">Quero experimentar ⟶</button>
+                <button class="solution__cta-button">Quero experimentar ⟶</button>
             </div>
-
         </div>
     </section>
 
-    <!-------------------------Quarto bloco---------------------------->
-
-    <section class="recursos" id="recursos">
-        <div class="container-recursos">
-
-            <div class="cabecalho-secao">
-                <span class="tag-recursos">⚡ Recursos</span>
-                <h2 class="titulo-recursos">
-                    Tudo que você precisa <span class="texto-colorido">para se vestir bem</span>
+    <!-- ==================== SEÇÃO RECURSOS ==================== -->
+    <section class="features" id="recursos">
+        <div class="features__container">
+            <!-- Cabeçalho -->
+            <div class="features__header">
+                <span class="features__tag">⚡ Recursos</span>
+                <h2 class="features__title">
+                    Tudo que você precisa <span class="features__title-highlight">para se vestir bem</span>
                 </h2>
-                <p class="subtitulo-recursos">
+                <p class="features__subtitle">
                     Funcionalidades pensadas para simplificar sua rotina de moda.
                 </p>
             </div>
 
-            <div class="grade-recursos">
+            <!-- Grid de Cards -->
+            <div class="features__grid">
+                <article class="features__card features__card--pink">
+                    <div class="features__card-icon">📸</div>
+                    <h3 class="features__card-title">Digitalize seu guarda-roupa</h3>
+                    <p class="features__card-text">Fotografe suas roupas e organize tudo no app em segundos.</p>
+                    <span class="features__card-number">01</span>
+                </article>
 
-                <div class="card-recurso tom-rosa">
-                    <div class="icone-recurso">📸</div>
-                    <h3>Digitalize seu guarda-roupa</h3>
-                    <p>Fotografe suas roupas e organize tudo no app em segundos.</p>
-                    <span class="numero-recurso">01</span>
-                </div>
+                <article class="features__card features__card--blue">
+                    <div class="features__card-icon">📚</div>
+                    <h3 class="features__card-title">Monte looks facilmente</h3>
+                    <p class="features__card-text">Crie combinações incríveis com o que você já tem no armário.</p>
+                    <span class="features__card-number">02</span>
+                </article>
 
-                <div class="card-recurso tom-azul">
-                    <div class="icone-recurso">📚</div>
-                    <h3>Monte looks facilmente</h3>
-                    <p>Crie combinações incríveis com o que você já tem no armário.</p>
-                    <span class="numero-recurso">02</span>
-                </div>
+                <article class="features__card features__card--pink">
+                    <div class="features__card-icon">📥</div>
+                    <h3 class="features__card-title">Organização automática</h3>
+                    <p class="features__card-text">O app categoriza suas peças por tipo, cor e estilo automaticamente.</p>
+                    <span class="features__card-number">03</span>
+                </article>
 
-                <div class="card-recurso tom-rosa">
-                    <div class="icone-recurso">📥</div>
-                    <h3>Organização automática</h3>
-                    <p>O app categoriza suas peças por tipo, cor e estilo automaticamente.</p>
-                    <span class="numero-recurso">03</span>
-                </div>
-
-                <div class="card-recurso tom-azul">
-                    <div class="icone-recurso">💡</div>
-                    <h3>Inspiração de combinações</h3>
-                    <p>Receba sugestões inteligentes baseadas no clima e na ocasião.</p>
-                    <span class="numero-recurso">04</span>
-                </div>
-
+                <article class="features__card features__card--blue">
+                    <div class="features__card-icon">💡</div>
+                    <h3 class="features__card-title">Inspiração de combinações</h3>
+                    <p class="features__card-text">Receba sugestões inteligentes baseadas no clima e na ocasião.</p>
+                    <span class="features__card-number">04</span>
+                </article>
             </div>
         </div>
     </section>
 
-
-    <!---------------------------Quinto bloco------------------------->
-
-    <section class="chamada-final" id="comecar">
-    <div class="ondas-fundo">
-        <div class="onda"></div>
-        <div class="onda"></div>
-        <div class="onda"></div>
-    </div>
-
-    <div class="conteudo-final">
-        <div class="estrelas-avaliacao">
-            <span class="estrelas">★★★★★</span>
-            <span class="texto-estrelas">4.9 de 5 estrelas</span>
+    <!-- ==================== SEÇÃO CHAMADA FINAL (CTA) ==================== -->
+    <section class="cta" id="comecar">
+        <!-- Ondas Decorativas -->
+        <div class="cta__waves">
+            <div class="cta__wave"></div>
+            <div class="cta__wave"></div>
+            <div class="cta__wave"></div>
         </div>
 
-        <span class="tag-pronto">● Pronto para começar?</span>
+        <div class="cta__content">
+            <div class="cta__rating">
+                <span class="cta__stars">★★★★★</span>
+                <span class="cta__rating-text">4.9 de 5 estrelas</span>
+            </div>
 
-        <h2 class="titulo-final">
-            Seu estilo começa <br> 
-            <span class="sublinhado-curvo">com organização</span>
-        </h2>
+            <span class="cta__tag">● Pronto para começar?</span>
 
-        <p class="descricao-final">
-            Transforme seu guarda-roupa em uma experiência digital.
-        </p>
+            <h2 class="cta__title">
+                Seu estilo começa <br>
+                <span class="cta__title-underline">com organização</span>
+            </h2>
 
-        <button class="btn-final">
-            Começar agora ⟶
-        </button>
-    </div>
-</section>
-
-
-<!--------------------------------Footer----------------------------------->
-
-
-<footer class="rodape">
-    <div class="container-rodape">
-        
-        <div class="coluna-rodape sobre">
-            <h2 class="logo-rodape">Look<span>Up</span></h2>
-            <p class="descricao-rodape">
-                Transformando a forma como você se relaciona com seu guarda-roupa. 
-                Simples, inteligente e para o seu dia a dia.
+            <p class="cta__description">
+                Transforme seu guarda-roupa em uma experiência digital.
             </p>
-        </div>
 
-        <div class="coluna-rodape">
-            <h3>NAVEGAÇÃO</h3>
-            <nav class="links-rodape">
-                <a href="#">Como funciona</a>
-                <a href="#">Recursos</a>
-                <a href="#">Benefícios</a>
-                <a href="#">Sobre</a>
-            </nav>
+            <button class="cta__button">Começar agora ⟶</button>
         </div>
+    </section>
 
-        <div class="coluna-rodape">
-            <h3>CONTATO</h3>
-            <div class="links-rodape">
-                <a href="mailto:lookup@gmail.com">lookup@gmail.com</a>
-                <a href="#">@lookup_</a>
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer__container">
+            <!-- Coluna Sobre -->
+            <div class="footer__column footer__column--about">
+                <h2 class="footer__logo">Look<span class="footer__logo-highlight">Up</span></h2>
+                <p class="footer__description">
+                    Transformando a forma como você se relaciona com seu guarda-roupa.
+                    Simples, inteligente e para o seu dia a dia.
+                </p>
+            </div>
+
+            <!-- Coluna Navegação -->
+            <div class="footer__column">
+                <h3 class="footer__column-title">NAVEGAÇÃO</h3>
+                <nav class="footer__links">
+                    <a href="#" class="footer__link">Como funciona</a>
+                    <a href="#" class="footer__link">Recursos</a>
+                    <a href="#" class="footer__link">Benefícios</a>
+                    <a href="#" class="footer__link">Sobre</a>
+                </nav>
+            </div>
+
+            <!-- Coluna Contato -->
+            <div class="footer__column">
+                <h3 class="footer__column-title">CONTATO</h3>
+                <div class="footer__links">
+                    <a href="mailto:lookup@gmail.com" class="footer__link">lookup@gmail.com</a>
+                    <a href="#" class="footer__link">@lookup_</a>
+                </div>
             </div>
         </div>
 
-    </div>
+        <div class="footer__bottom">
+            <hr class="footer__divider">
+            <p class="footer__copyright">© 2026 LookUp. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-    <div class="rodape-inferior">
-        <hr class="divisor-rodape">
-        <p>© 2026 LookUp. Todos os direitos reservados.</p>
-    </div>
-</footer>
-
-
+    <!-- Script para Menu Mobile -->
+    <script>
+        // Toggle do menu mobile
+        const menuToggle = document.querySelector('.header__menu-toggle');
+        const navMenu = document.querySelector('.header__nav');
+        
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function() {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !isExpanded);
+                navMenu.classList.toggle('header__nav--open');
+                this.classList.toggle('header__menu-toggle--active');
+            });
+        }
+    </script>
 </body>
 
 </html>
