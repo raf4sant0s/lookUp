@@ -1,0 +1,362 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    min-height:100vh;
+    color:#333;
+    overflow-x:hidden;
+}
+
+/*--------------------HEADER---------------------------*/
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 80px;
+    background-color: white;
+    height: 90px;
+    background: linear-gradient(to bottom, #ffffff, #c65d661b);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-icon img{
+    width: auto;
+    height: 70px;
+}
+
+.nav-menu{ 
+    display:flex;
+    gap:50px;
+}
+
+.nav-menu a{
+    text-decoration:none;
+    color:#636262b6 ;
+    font-weight:400;
+}
+
+.btn-primary-header{ /*botão começar agora*/
+
+    background:#c65d65;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+
+/*---------------------------Primeiro bloco--------------------------------*/
+
+/* HERO SECTION - TELA*/
+
+.hero{
+    position:relative;
+    /*padding:80px;*/
+    margin: 10px 80px 10px 80px;
+}
+
+.hero-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+}
+
+
+/* LADO ESQUERDO */
+
+.hero-left{
+    max-width:520px;
+}
+
+.hero-title{
+    font-size:56px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.text-gradient{
+
+    background: linear-gradient(90deg,#c55c64,#2e8b8b);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero-description{
+    font-size:18px;
+    color:#666;
+    margin-bottom:30px;
+}
+
+
+/* BOTÕES */
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    margin-bottom:40px;
+}
+/*  testar agora button  */
+.btn-main{
+    background:#c55c64;
+    color:white;
+    padding:15px 28px;
+    border-radius:14px;
+    border:none;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+.btn-main img {
+    width: 24px;
+    height: auto;
+    
+}
+/*  ver demonstração button  */
+.btn-outline{
+    border:2px solid #c55c64;
+    padding:14px 24px;
+    background:transparent;
+    border-radius:14px;
+    font-size:17px;
+    font-weight:600;
+    color:#c55c64;
+    cursor:pointer;
+}
+
+
+/* USERS */
+
+.hero-stats{
+    margin-top:20px;
+}
+
+.users {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: white;
+
+    margin-left: -9px; /* sobreposição */
+    border: 2px solid white; /* contorno branco */
+}
+
+/* evita cortar o primeiro */
+.user-avatar:first-child {
+    margin-left: 0;
+}
+
+.user-avatar:nth-child(1) { background: #c65d65; }
+.user-avatar:nth-child(2) { background: #D7A5A6; }
+.user-avatar:nth-child(3) { background: #044953; }
+.user-avatar:nth-child(4) { background: #D7A5A6; }
+.user-avatar:nth-child(5) { background: #c65d65; }
+
+.users span{
+    margin-left: 10px;
+    color: #666;
+}
+.stars img{
+    width: 100px;
+    height: auto;
+    margin-left:10px;
+    margin-top: 3px;
+}
+
+
+/*  +500 roupas organizadas e 4.9 avaliação média */
+
+.numbers{
+    display:flex;
+    gap:40px;
+}
+
+.stat{
+    margin-top: 5px;
+}
+.stat h3{
+    color:#c55c64;
+    font-size:24px;
+}
+
+.stat p{
+    font-size:14px;
+    color:#666;
+}
+
+
+
+/*    LADO DIREITO     */
+
+.hero-right{
+    position:relative;
+    width:600px;
+    height:700px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.phone-image{
+    width:300px;
+    z-index:2;
+}
+
+
+
+/*  esfumado  */
+
+.blur-background{
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:radial-gradient(circle,rgb(197, 92, 101),transparent);
+    filter:blur(100px);
+    z-index:1;
+}
+.blur-background2{
+    position:absolute;
+    width:600px;
+    height:600px;
+    background:radial-gradient(circle,#c55c654c,transparent);
+    filter:blur(60px);
+    z-index:1;
+}
+
+
+
+
+/*  mini cards  */
+
+.floating-card{
+    position:absolute;
+    background:white;
+    padding:14px 18px;
+    border-radius:14px;
+    font-size:14px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    z-index:3;
+}
+
+.floating-card span{
+    font-size:12px;
+    color:#666;
+}
+
+.card-top{
+    top:80px;
+    left:10px;
+}
+.card-top p {
+    font-weight: 700;
+}
+
+.card-bottom{
+    bottom:60px;
+    right:20px;
+}
+.card-bottom p {
+    font-weight: 700;
+}
+
+
+
+
+/* BOLAS DECORATIVAS */
+
+.decor-circle{
+    position: absolute;
+    border-radius:50%;
+    opacity:0.6;
+}
+
+/*  bolinhas de cima  */
+.circle1{
+
+    width:45px;
+    height:45px;
+    background:#e7a6a6;
+    top:40px;
+    z-index: -1;
+    left:90px;
+}
+
+.circle2{
+
+    width:30px;
+    height:30px;
+    background:#4f8b8b;
+    top:30px;
+    left:170px;
+}
+
+.circle3{
+
+    width:15px;
+    height:15px;
+    background:#e7a6a6;
+    top:60px;
+    left:230px;
+}
+
+.circle4{
+
+    width:40px;
+    height:40px;
+    background:#4f8b8b;
+    top:15px;
+    left:290px;
+}
+
+
+/*bolinhas do celular*/
+.circle7{
+
+    width:40px;
+    height:40px;
+    background:#4f8b8b;
+    bottom:120px;
+    right:200px;
+}
+
+.circle8{
+
+    width:70px;
+    height:70px;
+    background:#e7a6a6;
+    top:180px;
+    right:80px;
+}
+
+
+/*-----------------------encerramento do primeiro bloco-------------------------------*/
+
+
+
+
+
+
