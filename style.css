@@ -7,7 +7,7 @@
 body{
     font-family: 'Inter', sans-serif;
     background: #ffffff;
-    min-height:100vh;
+    min-height:200vh;
     color:#333;
     overflow-x:hidden;
 }
@@ -45,8 +45,12 @@ body{
     color:#636262b6 ;
     font-weight:400;
 }
+.nav-menu a:hover{
+    color: #d76b6bdf;
+}
 
-.btn-primary-header{ /*botão começar agora*/
+
+.btn-primary-header button { /*botão começar agora*/
 
     background:#c65d65;
     color:white;
@@ -56,8 +60,13 @@ body{
     font-weight:600;
     cursor:pointer;
     box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    
 }
-
+.btn-primary-header:hover{
+    transition:0.4s;
+    transform: scale(1.2);
+    z-index:2;
+}
 
 /*---------------------------Primeiro bloco--------------------------------*/
 
@@ -108,6 +117,8 @@ body{
     display:flex;
     gap:20px;
     margin-bottom:40px;
+    cursor: pointer;
+    transition:0.4s;
 }
 /*  testar agora button  */
 .btn-main{
@@ -118,16 +129,21 @@ body{
     border:none;
     font-size:17px;
     font-weight:600;
-    cursor:pointer;
+ 
     box-shadow:0 10px 20px rgba(0,0,0,0.15);
 }
 .btn-main img {
     width: 24px;
     height: auto;
-    
 }
+.btn_main {
+    transition:0.4s;
+    transform: scale(1.2);
+    z-index:2;
+}
+
 /*  ver demonstração button  */
-.btn-outline{
+.btn-outline {
     border:2px solid #c55c64;
     padding:14px 24px;
     background:transparent;
@@ -135,7 +151,13 @@ body{
     font-size:17px;
     font-weight:600;
     color:#c55c64;
-    cursor:pointer;
+    cursor: pointer;
+    transition:0.4s;
+}
+
+.btn-outline:hover{
+    transform: scale(1.2);
+    z-index:2;
 }
 
 
@@ -353,10 +375,716 @@ body{
 }
 
 
+/*  hover  */
+
+.user-avatar{
+  transition:0.3s;
+}
+
+.user-avatar:hover{
+  transform: scale(1.2);
+  z-index:2;
+}
+
+.phone-image{
+  transition: transform 0.4s ease;
+}
+
+.phone-image:hover{
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.floating-card{
+  transition: all 0.3s ease;
+}
+
+.floating-card:hover{
+  transform: translateY(-5px) scale(1.03);
+}
+
+
 /*-----------------------encerramento do primeiro bloco-------------------------------*/
 
+/*------------------- SEÇÃO PROBLEMAS -------------------*/
+
+.problemas {
+    padding: 100px 80px;
+    background-color: #fffafb; /* Um tom bem leve de rosa para diferenciar do branco */
+    text-align: center;
+}
+
+.container-problemas {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+.tag-identifica {
+    background: #fce4e6;
+    color: #c55c64;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.titulo-problema {
+    font-size: 42px;
+    color: #333;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.destaque-curvo {
+    color: #c55c64;
+    position: relative;
+    display: inline-block;
+}
+
+/* Pequena linha decorativa embaixo da palavra "facilitar" */
+.destaque-curvo::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #f1b3b8;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+}
+
+.subtitulo-problema {
+    color: #777;
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+/* Grid de Cards */
+.grade-problemas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card-problema {
+    background: #f8f3f0; /* Cor de fundo idêntica ao seu print */
+    padding: 40px 30px;
+    border-radius: 24px;
+    text-align: left;
+    position: relative;
+    transition: all 0.4s ease; /* Suavidade no movimento */
+    cursor: default;
+    overflow: hidden;
+}
+
+/* Efeito de Hover: Sobe um pouco e aumenta a sombra */
+.card-problema:hover {
+    transform: translateY(-10px);
+    background: #ffffff;
+    box-shadow: 0 20px 40px rgba(197, 92, 100, 0.1);
+}
+
+.icone-box {
+    font-size: 24px;
+    margin-bottom: 20px;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.numero-card {
+    font-size: 28px;
+    font-weight: 800;
+    color: #f1b3b8;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.card-problema h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card-problema p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Emojis flutuantes nos cantos dos cards */
+.emoji-feedback {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 32px;
+    opacity: 0.3;
+    transition: all 0.4s ease;
+}
+
+.card-problema:hover .emoji-feedback {
+    opacity: 1;
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* Responsividade simples */
+@media (max-width: 768px) {
+    .header, .hero, .problemas {
+        padding: 40px 20px;
+    }
+    .titulo-problema {
+        font-size: 30px;
+    }
+}
+
+/*------------------- SEÇÃO SOLUÇÃO -------------------*/
+
+.solucao {
+    padding: 100px 80px;
+    position: relative;
+    background-color: #fdf8f6; /* Tom levemente rosado/bege */
+    overflow: hidden;
+}
+
+.container-solucao {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+/* Lado Visual (Esquerda) */
+.solucao-visual {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moldura-glass {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border: 2px dashed #d1d1d1; /* Borda pontilhada da imagem */
+    border-radius: 40px;
+    padding: 40px;
+    z-index: 2;
+    transition: transform 0.5s ease;
+}
+
+.moldura-glass:hover {
+    transform: scale(1.02);
+}
+
+.grupo-celulares {
+    display: flex;
+    align-items: center;
+    gap: -20px; /* Sobreposição leve */
+}
+
+.celular {
+    height: 300px; /* Ajuste conforme suas imagens */
+    transition: all 0.4s ease;
+}
+
+
+/* Efeito de flutuação nos celulares ao passar o mouse */
+.moldura-glass:hover .celular.principal {
+    transform: translateY(-15px);
+}
+
+
+/* Círculos de fundo (Anéis da imagem) */
+.circulo-decorativo {
+    position: absolute;
+    border: 2px solid #e0e0e0;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.decor-1 { width: 400px; height: 400px; top: -50px; left: -100px; }
+.decor-2 { width: 300px; height: 300px; bottom: -50px; right: 0px; }
+
+/* Lado Conteúdo (Direita) */
+.solucao-conteudo {
+    flex: 1;
+    text-align: left;
+}
+
+.tag-solucao {
+    background: #cdd8d8;
+    color: #044953;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.titulo-solucao {
+    font-size: 48px;
+    margin: 20px 0;
+    color: #333;
+}
+
+.destaque-logo {
+    color: #c55c64;
+}
+
+.descricao-solucao {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Lista de Benefícios */
+.lista-beneficios {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.lista-beneficios li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 17px;
+    color: #444;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.lista-beneficios li:hover {
+    transform: translateX(10px);
+    color: #044953;
+}
+
+.check-icone {
+    width: 28px;
+    height: 28px;
+    background: #eaf2f2;
+    border: 1.5px solid #044953;
+    color: #044953;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Botão Quero Experimentar */
+.btn-experimentar {
+    background: #c55c64;
+    color: white;
+    padding: 18px 35px;
+    border-radius: 14px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(197, 92, 100, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-experimentar:hover {
+    background: #b04d55;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(197, 92, 100, 0.4);
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 992px) {
+    .container-solucao {
+        flex-direction: column;
+        text-align: center;
+    }
+    .solucao-conteudo {
+        text-align: center;
+    }
+    .lista-beneficios li {
+        justify-content: center;
+    }
+    .celular { height: 300px; }
+    .celular.lateral { height: 250px; }
+}
+
+
+
+/*------------------- SEÇÃO RECURSOS -------------------*/
+
+.recursos {
+    padding: 100px 80px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.container-recursos {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tag-recursos {
+    background: #fce4e6;
+    color: #c55c64;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.titulo-recursos {
+    font-size: 42px;
+    margin: 25px 0;
+    color: #333;
+}
+
+.texto-colorido {
+    color: #c55c64;
+}
+
+.subtitulo-recursos {
+    color: #777;
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+/* Grade de Cards */
+.grade-recursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card-recurso {
+    padding: 50px 35px;
+    border-radius: 20px;
+    text-align: left;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+/* Cores Alternadas baseadas no seu Figma */
+.tom-rosa {
+    background-color: #f8f1f0; /* Bege rosado suave */
+}
+
+.tom-azul {
+    background-color: #e2ebeb; /* Azul/Verde acinzentado suave */
+}
+
+/* Efeito Hover */
+.card-recurso:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    z-index: 10;
+}
+
+.icone-recurso {
+    background: rgba(255, 255, 255, 0.6);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.card-recurso h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+    max-width: 80%;
+}
+
+.card-recurso p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Números nos cantos */
+.numero-recurso {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    font-size: 24px;
+    font-weight: 800;
+    opacity: 0.2;
+    transition: opacity 0.3s ease;
+}
+
+.tom-rosa .numero-recurso { color: #c55c64; }
+.tom-azul .numero-recurso { color: #044953; }
+
+.card-recurso:hover .numero-recurso {
+    opacity: 0.6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .recursos {
+        padding: 60px 20px;
+    }
+    .titulo-recursos {
+        font-size: 32px;
+    }
+}
 
 
 
 
+/*------------------- SEÇÃO CHAMADA FINAL -------------------*/
 
+.chamada-final {
+    position: relative;
+    padding: 120px 20px;
+    background: linear-gradient(135deg, #c55c64 0%, #3a6060 100%);
+    text-align: center;
+    color: white;
+    overflow: hidden; /* Garante que os círculos não saiam da seção */
+}
+
+.conteudo-final {
+    position: relative;
+    z-index: 5; /* Fica acima das ondas */
+}
+
+/* Estrelas */
+.estrelas-avaliacao {
+    margin-bottom: 20px;
+}
+
+.estrelas {
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.texto-estrelas {
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+    opacity: 0.9;
+}
+
+/* Tag central */
+.tag-pronto {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+/* Título */
+.titulo-final {
+    font-size: 64px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.sublinhado-curvo {
+    position: relative;
+}
+
+/* Linha decorativa embaixo do título */
+.sublinhado-curvo::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.3);
+    bottom: 5px;
+    left: 0;
+    border-radius: 10px;
+}
+
+.descricao-final {
+    font-size: 18px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* Botão Principal */
+.btn-final {
+    background-color: #f8f3f0;
+    color: #c55c64;
+    padding: 18px 45px;
+    border-radius: 14px;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.btn-final:hover {
+    background-color: #ffffff;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ONDAS DECORATIVAS AO FUNDO */
+.ondas-fundo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.onda {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: pulsarOnda 6s infinite linear;
+}
+
+/* Criando tamanhos diferentes para as ondas */
+.onda:nth-child(1) { width: 300px; height: 300px; animation-delay: 0s; }
+.onda:nth-child(2) { width: 600px; height: 600px; animation-delay: 2s; }
+.onda:nth-child(3) { width: 900px; height: 900px; animation-delay: 4s; }
+
+@keyframes pulsarOnda {
+    0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(1.2); opacity: 0; }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .titulo-final {
+        font-size: 40px;
+    }
+    .chamada-final {
+        padding: 80px 20px;
+    }
+}
+
+
+/*------------------- RODAPÉ -------------------*/
+
+.rodape {
+    background-color: #333333; /* Cinza escuro do Figma */
+    color: #ffffff;
+    padding: 80px 80px 40px 80px;
+    font-family: 'Inter', sans-serif;
+}
+
+.container-rodape {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr; /* Coluna da logo um pouco maior */
+    gap: 40px;
+}
+
+/* Coluna da Logo */
+.logo-rodape {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.logo-rodape span {
+    color: #c55c64; /* Rosa da marca */
+}
+
+.descricao-rodape {
+    color: #bbbbbb;
+    line-height: 1.6;
+    max-width: 300px;
+    font-size: 15px;
+}
+
+/* Títulos das Colunas */
+.coluna-rodape h3 {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #888888;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Links do Rodapé */
+.links-rodape {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.links-rodape a {
+    color: #bbbbbb;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+/* Hover: Muda cor e move levemente para a direita */
+.links-rodape a:hover {
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+/* Parte Inferior (Copyright) */
+.rodape-inferior {
+    max-width: 1200px;
+    margin: 60px auto 0 auto;
+}
+
+.divisor-rodape {
+    border: 0;
+    border-top: 1px solid #444444;
+    margin-bottom: 30px;
+}
+
+.rodape-inferior p {
+    color: #777777;
+    font-size: 14px;
+}
+
+/* Responsividade para o Rodapé */
+@media (max-width: 768px) {
+    .rodape {
+        padding: 60px 20px 30px 20px;
+    }
+
+    .container-rodape {
+        grid-template-columns: 1fr; /* Empilha as colunas no celular */
+        text-align: center;
+    }
+
+    .descricao-rodape {
+        margin: 0 auto;
+    }
+
+    .links-rodape a {
+        margin: 0 auto;
+    }
+
+    .links-rodape a:hover {
+        transform: translateY(-3px); /* No mobile, melhor subir do que ir para o lado */
+    }
+}
